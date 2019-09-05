@@ -1,5 +1,7 @@
 # Cryptio `technical test`
 
+![Image of Project](https://www.zupimages.net/up/19/36/g2n7.jpg)
+
 **English version**
 
 Project done in NodeJs to convert an amount from one value to another
