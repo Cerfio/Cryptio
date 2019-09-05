@@ -71,16 +71,6 @@ app.post('/', function (req, res) {
   value = req.body.Amount;
 
   response_conversion(base_currency, new_currency, value, res, false);
-/*    if (data.code == "2101") {
-      res.render('index', {base: null, amount: null,
-        new_base: null, new_amount: null, error: "Something went wrong"
-       });
-       return;
-    }
-    res.render('index', {base: from.currency, amount: from.amount,
-                          new_base: to.currency, new_amount : to.amount, error: null
-                         });
-  });*/
 })
 
 app.post('/server', function (req, res) {
