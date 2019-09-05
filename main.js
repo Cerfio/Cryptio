@@ -88,7 +88,6 @@ app.get('/', function (req, res) {
 })
 
 app.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
   console.log(`To have the HTML view here http://${hostname}:${port}/`)
   console.log(`To use POST requests here http://${hostname}:${port}/server`)
 });

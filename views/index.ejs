@@ -3,33 +3,74 @@
   <head>
     <meta charset="utf-8">
     <title>Crypto Convert</title>
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/slicknav.min.css">
+    <link rel="stylesheet" href="assets/css/animation.css">
+    <link rel="stylesheet" href="assets/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
   </head>
   <body>
-    <div class="formulaire">
-      <!-- <fieldset> -->
-        <form action="/" method="post">
-          <input name="Amount" type="text" class="ghost-input" placeholder="Enter an amount" required>
-          <input name="Base" type="text" class="ghost-input" placeholder="Enter an base" required>
-          <input name="Final" type="text" class="ghost-input" placeholder="Enter an final" required>
-          <input type="submit" class="ghost-button" value="Get Conversion">
-        </form>
-      <!-- </fieldset> -->
-    </div>
-    <div class="centrer">
-      <% if (error !== null) %>
-        <p><%= error %></p>
-      <% if(amount !== null){ %>
-        <p>Base Amount <%= amount %> <%= base %></p>
-      <% } else { %>
-        <p>0 EUR</p>
-      <% } %>
-      <% if(new_amount !== null){ %>
-        <p>New Amount <%= new_amount %> <%= new_base %></p>
-      <% } else { %>
-        <p>0 EUR</p>
-      <% } %>
-    </div>
+  <div class="welcome-area wow fadeInUp" id="home">
+      <div id="particles-js"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-6 align-self-center">
+              <!-- <div> -->
+              <div class="welcome-right">
+                <div class="welcome-text">
+                  <h1 id="up-text">currency converter</h1>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="welcome-img">
+                <img src="assets/img/welcome-img.png" alt="">
+              </div>
+            </div>
+            <div class="centrer money">
+                <% if (error !== null) { %>
+                  <h5><%= error %></h5>
+                <% } else { %>
+                  <% if(amount !== null) { %>
+                    <h5>Base Amount <%= amount %> <%= base %></h5>
+                  <% } %>
+                  <% if(new_amount !== null) { %>
+                    <h5>New Amount <%= new_amount %> <%= new_base %></h5>
+                  <% } %>
+                <% } %>
+            </div>
+            <div class="formulaire">
+              <form action="/" method="post">
+                <h4>Amount
+                  <input name="Amount" type="text" class="ghost-input" placeholder="Enter an amount" required>
+                </h4>
+                <h4>Basic currency
+                  <input name="Base" type="text" class="ghost-input" placeholder="Enter an base" required>
+                </h4>
+                <h4>Quote currency
+                  <input name="Final" type="text" class="ghost-input" placeholder="Enter an final" required>
+                </h4>
+                <button class="gradient-btn v2" type="submit">
+                  Get Conversion
+                </button>
+              </form>
+            </div>
+          </div>
+      </div>
+  </div>
+  <script src="assets/js/jquery-2.2.4.min.js"></script>
+  <script src="assets/js/popper.js"></script>
+  <script src="assets/js/owl.carousel.min.js"></script>
+  <script src="assets/js/wow.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/skrollr.min.js"></script>
+  <script src="assets/js/jquery.slicknav.min.js"></script>
+  <script src="assets/js/particles.min.js"></script>
+  <script src="assets/js/main.js"></script>
   </body>
 </html>
