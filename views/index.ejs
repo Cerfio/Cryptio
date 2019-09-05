@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Crypto Convert</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="formulaire">
+      <!-- <fieldset> -->
+        <form action="/" method="post">
+          <input name="Amount" type="text" class="ghost-input" placeholder="Enter an amount" required>
+          <input name="Base" type="text" class="ghost-input" placeholder="Enter an base" required>
+          <input name="Final" type="text" class="ghost-input" placeholder="Enter an final" required>
+          <input type="submit" class="ghost-button" value="Get Conversion">
+        </form>
+      <!-- </fieldset> -->
+    </div>
+    <div class="centrer">
+      <% if (error !== null) %>
+        <p><%= error %></p>
+      <% if(amount !== null){ %>
+        <p>Base Amount <%= amount %> <%= base %></p>
+      <% } else { %>
+        <p>0 EUR</p>
+      <% } %>
+      <% if(new_amount !== null){ %>
+        <p>New Amount <%= new_amount %> <%= new_base %></p>
+      <% } else { %>
+        <p>0 EUR</p>
+      <% } %>
+    </div>
+  </body>
+</html>
