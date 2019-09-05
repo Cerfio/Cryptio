@@ -7,7 +7,7 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 const hostname = '127.0.0.1';
-const port = 3000;
+const port = process.env.PORT || 5000;
 
 function getConversion(url) {
   let options = {
@@ -87,7 +87,7 @@ app.get('/', function (req, res) {
     });
 })
 
-app.listen(port, hostname, () => {
+app.listen(port, () => {
   console.log(`To have the HTML view here http://${hostname}:${port}/`)
   console.log(`To use POST requests here http://${hostname}:${port}/server`)
 });
