@@ -1,0 +1,30 @@
+{
+  "name": "cryptio",
+  "version": "1.0.0",
+  "description": "Technical test",
+  "main": "main.js",
+  "engines": {
+    "node": "8.12.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cerfio/Cryptio.git"
+  },
+  "author": "cerfio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cerfio/Cryptio/issues"
+  },
+  "homepage": "https://github.com/Cerfio/Cryptio#readme"
+}
