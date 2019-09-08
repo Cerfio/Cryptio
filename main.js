@@ -78,7 +78,14 @@ app.post('/server', function (req, res) {
   new_currency = req.get("quote_currency");
   value = req.get("value");
 
-  response_conversion(base_currency, new_currency, value, res, true);
+  if (base_currency == undefined)
+    res.send({Error : "Undefined base_currency"});
+  else if (new_currency == undefined)
+    res.send({Error : "Undefined new_currency"});
+  else if (value == undefined)
+    res.send({Error : "Undefined value"});
+  else
+    response_conversion(base_currency, new_currency, value, res, true);
 })
 
 app.get('/', function (req, res) {
