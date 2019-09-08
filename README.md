@@ -1,5 +1,7 @@
 # Cryptio `technical test`
 
+**Don't forget to use `npm install`**
+
 ![Image of Project](https://www.zupimages.net/up/19/36/g2n7.jpg)
 
 **English version**
